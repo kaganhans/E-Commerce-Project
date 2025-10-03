@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* küçük reset – linklerin mor/alt çizgisi gitmesi için */
+@layer base {
+  a { @apply text-inherit no-underline; }
+  button { @apply text-inherit; }
+}
