@@ -1,9 +1,12 @@
 import Container from "./Container";
 import { SOCIAL_ICONS } from "../images";
 
-export default function TopBar() {
+export default function TopBar({ bgColor = "#252B42" }) {
   return (
-    <div className="bg-[#252B42] text-white hidden md:flex">
+    <div 
+      className="text-white hidden md:flex" 
+      style={{ backgroundColor: bgColor }}
+    >
       <Container>
         <div className="h-10 flex items-center justify-between font-sans font-bold text-[14px] leading-[24px] tracking-[0.2px]">
           

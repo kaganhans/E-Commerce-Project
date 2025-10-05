@@ -30,9 +30,9 @@ export default function Hero() {
                   <br /> but things on a small scale.
                 </p>
 
-                {/* SHOP NOW — 221x62, Montserrat 700 / 24px / 32px / 0.1px, center */}
+                {/* MASAÜSTÜ: href="/shop" olarak değiştirildi */}
                 <a
-                  href="#"
+                  href="/shop"
                   className="
                     inline-flex items-center justify-center text-center
                     w-[221px] h-[62px] px-[26px] rounded-[5px]
@@ -82,8 +82,9 @@ export default function Hero() {
                   small scale.
                 </p>
 
+                {/* MOBİL: href="/shop" olarak değiştirildi */}
                 <a
-                  href="#"
+                  href="/shop"
                   className="inline-flex items-center justify-center w-[221px] h-[62px] bg-[#23A6F0] text-white font-bold text-[20px] leading-[24px] tracking-[0.1px] rounded-[5px] mx-auto lg:mx-0 hover:bg-blue-600 transition-colors"
                 >
                   SHOP NOW

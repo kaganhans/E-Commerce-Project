@@ -63,7 +63,6 @@ export const ICONS = {
   new: "/img/new.png",
 };
 
-// YENİ RENKLER
 export const COLORS = {
   blue: "/img/blue.png",
   green: "/img/green.png", 
@@ -71,7 +70,6 @@ export const COLORS = {
   black: "/img/black.png"
 };
 
-// SOSYAL MEDYA İKONLARI
 export const SOCIAL_ICONS = {
   facebook: "/img/facebook.png",
   instagram: "/img/instagram.png", 
@@ -81,3 +79,31 @@ export const SOCIAL_ICONS = {
   facebooktb: "/img/fb-tb.png",
   twittertb: "/img/tw-tb.png",
 };
+
+export const CLOTHS = [
+  "/img/cloths-1.png",
+  "/img/cloths-2.png",
+  "/img/cloths-3.png",
+  "/img/cloths-4.png",
+  "/img/cloths-5.png",
+];
+
+export const SHOWING = [
+  "/img/showing-1.png",
+  "/img/showing-2.png",
+  "/img/showing-3.png",
+  "/img/showing-4.png",
+  "/img/showing-5.png",
+  "/img/showing-6.png",
+  "/img/showing-7.png",
+  "/img/showing-8.png",
+  "/img/showing-9.png",
+  "/img/showing-10.png",
+  "/img/showing-11.png",
+  "/img/showing-12.png",
+];
+
+export const VIEWS = [
+  "/img/views-1.png",
+  "/img/views-2.png",
+]

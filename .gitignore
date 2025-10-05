@@ -2,3 +2,15 @@ node_modules/
 dist/
 .env
 .DS_Store
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node/Vite
+node_modules/
+dist/
+
+# Misc
+.vscode/
+*.log

@@ -13,7 +13,8 @@ export default function HomePage() {
   return (
     <div className="font-sans text-[#252B42]">
       <TopBar />
-      <Navbar />
+      {/* GÜNCELLENDİ: Navbar'a sayfa türü prop'u eklendi */}
+      <Navbar pageType="Home" /> 
       <Hero />
       <BrandRow />
       <WeeklyGrid />
