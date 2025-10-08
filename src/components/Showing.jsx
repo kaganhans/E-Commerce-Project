@@ -2,17 +2,22 @@
 
 import { SHOWING, VIEWS } from '../images';
 import React, { useState, useEffect } from 'react';
+// Detay sayfasına yönlendirme için React Router'dan 'Link' bileşenini varsayıyoruz.
+import { Link } from 'react-router-dom';
 
 // ProductCard Bileşeni
+// Bileşeni Link ile sarmalayarak tıklanabilir hale getiriyoruz.
 const ProductCard = ({ imagePath, index }) => (
-  <div className="w-full flex flex-col items-center text-center mb-10 relative">
+  // Link etiketi, her kartı belirtilen dosya adına göre bir URL'e yönlendirir.
+  // URL: /detail/0, /detail/1, /detail/2, vb.
+  <Link to={`/detail/`} className="w-full flex flex-col items-center text-center mb-10 relative group hover:shadow-lg transition-shadow duration-300">
     <img
       src={imagePath}
       alt={`Ürün ${index + 1}`}
       className="w-full h-auto object-cover"
     />
     <div className="pt-4 px-6 pb-6 bg-white w-full">
-      <h3 className="text-[#252B42] text-[16px] font-bold leading-[24px] tracking-[0.1px]">
+      <h3 className="text-[#252B42] text-[16px] font-bold leading-[24px] tracking-[0.1px] group-hover:text-[#23A6F0] transition-colors">
         Graphic Design
       </h3>
       <p className="text-[#737373] text-[14px] font-bold leading-[24px] tracking-[0.2px] mt-1">
@@ -33,7 +38,7 @@ const ProductCard = ({ imagePath, index }) => (
         <div className="w-[18px] h-[18px] rounded-full bg-[#252B42]" />
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 // Sabitler

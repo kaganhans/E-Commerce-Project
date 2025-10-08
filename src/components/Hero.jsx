@@ -1,5 +1,7 @@
+// Hero.jsx
 import Container from "./Container";
 import { HERO_SRC } from "../images";
+import { Link } from "react-router-dom"; // 👈 eklendi
 
 const imgErr = (label) => (e) =>
   console.warn(`Görsel bulunamadı [${label}]:`, e.currentTarget.src);
@@ -7,7 +9,7 @@ const imgErr = (label) => (e) =>
 export default function Hero() {
   return (
     <section className="w-full font-['Montserrat']">
-      {/* MASAÜSTÜ GÖRÜNÜM - Yedek dosya stilinde */}
+      {/* MASAÜSTÜ GÖRÜNÜM */}
       <div className="hidden lg:block w-full pt-6 pb-10">
         <div className="w-full overflow-x-auto">
           <div className="relative mx-auto w-[1292px] min-w-[1292px] h-[622px]">
@@ -30,18 +32,19 @@ export default function Hero() {
                   <br /> but things on a small scale.
                 </p>
 
-                {/* MASAÜSTÜ: href="/shop" olarak değiştirildi */}
-                <a
-                  href="/shop"
+                {/* MASAÜSTÜ: Link ile SPA navigasyonu */}
+                <Link
+                  to="/shop"
                   className="
                     inline-flex items-center justify-center text-center
                     w-[221px] h-[62px] px-[26px] rounded-[5px]
                     bg-[#23A6F0] text-white
                     font-bold text-[20px] leading-[24px] tracking-[0.1px]
                     whitespace-nowrap hover:bg-blue-600 transition-colors"
+                  aria-label="Shop sayfasına git"
                 >
                   SHOP NOW
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -59,14 +62,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* MOBİL GÖRÜNÜM - Mevcut kodun mobil yapısı */}
+      {/* MOBİL GÖRÜNÜM */}
       <div className="lg:hidden w-full py-16">
         <Container>
-          {/* Gradient container with spacing and radius */}
           <div className="bg-gradient-to-r from-[#96E9FB] to-[#ABECD6] rounded-2xl p-6 md:p-8 lg:p-12 mx-4 md:mx-0">
             <div className="flex flex-col lg:flex-row items-center gap-8">
-              
-              {/* Sol - İçerik */}
               <div className="flex-1 flex flex-col gap-6 text-center lg:text-left">
                 <span className="text-[14px] font-bold text-[#2A7CC7] tracking-[0.2px] leading-[24px]">
                   SUMMER 2020
@@ -82,16 +82,16 @@ export default function Hero() {
                   small scale.
                 </p>
 
-                {/* MOBİL: href="/shop" olarak değiştirildi */}
-                <a
-                  href="/shop"
+                {/* MOBİL: Link ile SPA navigasyonu */}
+                <Link
+                  to="/shop"
                   className="inline-flex items-center justify-center w-[221px] h-[62px] bg-[#23A6F0] text-white font-bold text-[20px] leading-[24px] tracking-[0.1px] rounded-[5px] mx-auto lg:mx-0 hover:bg-blue-600 transition-colors"
+                  aria-label="Shop sayfasına git"
                 >
                   SHOP NOW
-                </a>
+                </Link>
               </div>
 
-              {/* Sağ - Resim */}
               <div className="flex-1 flex justify-center">
                 <img
                   src={HERO_SRC}
@@ -100,7 +100,6 @@ export default function Hero() {
                   className="w-full max-w-md lg:max-w-lg h-auto object-contain"
                 />
               </div>
-              
             </div>
           </div>
         </Container>

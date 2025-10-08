@@ -61,6 +61,8 @@ export const ICONS = {
   denge: "/img/denge.png",
   drop: "/img/drop.png",
   new: "/img/new.png",
+  chevronLeft: "/img/Left.png", 
+  chevronRight: "/img/Right.png",
 };
 
 export const COLORS = {
@@ -106,4 +108,24 @@ export const SHOWING = [
 export const VIEWS = [
   "/img/views-1.png",
   "/img/views-2.png",
+]
+
+export const DETAY = [
+  "/img/Detay-1.png",
+  "/img/Detay-2.png",
+]
+
+export const QUICK = [
+  "/img/Quick-1.png",
+]
+
+export const BEST = [
+  "/img/Bestseller-1.png",
+  "/img/Bestseller-2.png",
+  "/img/Bestseller-3.png",
+  "/img/Bestseller-4.png",
+  "/img/Bestseller-5.png",
+  "/img/Bestseller-6.png",
+  "/img/Bestseller-1.png",
+  "/img/Bestseller-2.png",
 ]

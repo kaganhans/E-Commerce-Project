@@ -135,3 +135,65 @@ Kısa Akış
 - ShopPage → ürünleri listeler; üst çubuk, grid ve sayfalama birliktedir.
 - Container → tüm bu bölümleri hizalar.
 - images.js → görsel yollarını tek yerden yönetir.
+
+
+DETAIL PAGE (ÜRÜN DETAY SAYFASI)
+--------------------------------
+AMAÇ
+- Ürünün büyük görseli, küçük önizlemeleri, fiyat/stok ve renk seçeneklerini göstermek.
+- Oklarla görseller arası geçiş; küçük görsele tıklayınca ana görseli değiştirmek.
+
+DOSYA KONUMU
+- Sayfa: src/pages/DetailPage.jsx
+- Ana bileşen: src/components/DetailHero.jsx
+- Ortak alanlar: src/components/TopBar.jsx, src/components/Navbar.jsx, src/components/SiteFooter.jsx
+- Yardımcı bölümler: src/components/ShopNav.jsx, src/components/Quick.jsx, src/components/Bestseller.jsx, src/components/BrandRow.jsx
+- Görsel/ikon yolları: src/images.js (DETAY, ICONS, COLORS)
+- Statik dosyalar: public/img/...
+
+İÇERİK (KISA ÖZET)
+- Başlık, yıldız/yorum sayısı, fiyat, stok durumu
+- Kısa açıklama (satır sonları <br />)
+- Renk seçenekleri (4 yuvarlak)
+- Butonlar: “Select Options” + like/cart/eye ikonları
+
+GÖRSEL GALERİ
+- Büyük görsel: object-cover ile kutuya taşmadan sığar; hover’da hafif zoom.
+- Oklar: Left.png / Right.png, ~24×44 px; kenardan 24 px içeride; focus halkası kapalı.
+- Küçük önizlemeler: iki adet; aktif olana hafif blur (blur-[1.5px]).
+- Not: Detay-3 görseli yok; iki görsel kullanılır.
+
+SAYFA İSKELETİ
+- TopBar → kampanya/duyuru şeridi (bgColor="#23856D").
+- Navbar → logo + menü (pageType="DetailPage").
+- ShopNav → breadcrumb (Home > Shop > Detail), başlık gizli.
+- DetailHero → galeri + başlık/fiyat/stok/açıklama/renk + butonlar.
+- Quick → Description / Additional Information / Reviews sekmeleri.
+- Bestseller → önerilen ürünler (mobilde “Load More”).
+- BrandRow → marka şeridi (bgColor="#FAFAFA").
+- SiteFooter → alt bilgi (topBgColor="#FFFFFF").
+
+DUYARLILIK (RESPONSIVE)
+- Masaüstü: sol görsel galeri, sağ bilgi; altta diğer bloklar.
+- Mobil: bloklar alt alta; görseller kutuya göre ölçeklenir.
+
+ÖZELLEŞTİRME
+- Ok konumu/boyutu: left-[24px] / right-[24px], ikon w-[24px] h-[44px].
+- Blur şiddeti: blur-[1.5px] → blur-[1px] / blur-sm.
+- Renk seçimi vurgusu: istenirse ring/outline eklenebilir.
+- Metin/fiyat/başlık: DetailHero.jsx’ten düzenlenir.
+
+NOTLAR
+- images.js içindeki yollar /img/... formatıyla public/img’e işaret eder.
+- iOS dokunma highlight’ı kapalı; oklarda mavi focus çerçevesi yok.
+- Görsel yüklenmezse konsola uyarı düşer (onError).
+
+Kısa Akış
+- /detail → sayfa açılır; TopBar + Navbar gelir.
+- ShopNav → breadcrumb: Home > Shop > Detail.
+- DetailHero → büyük görsel + oklarla geçiş + küçük önizleme blur + fiyat/stok/açıklama/renk + butonlar.
+- Quick → Description / Additional Information / Reviews sekmeleri.
+- Bestseller → önerilen ürünler; mobilde “Load More”.
+- BrandRow → marka logoları.
+- SiteFooter → sayfa altı.
+- images.js → görsel ve ikon yollarını tek yerden yönetir.
