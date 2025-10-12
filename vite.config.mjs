@@ -9,7 +9,6 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   plugins: [react()],
   css: {
-    // PostCSS için MUTLAKA bu projedeki dosyayı kullan
     postcss: resolve(__dirname, "postcss.config.js"),
   },
 });

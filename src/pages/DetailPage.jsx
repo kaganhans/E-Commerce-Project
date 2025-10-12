@@ -10,16 +10,14 @@ import SiteFooter from "../components/SiteFooter";
 export default function DetailPage() {
   return (
     <div className="font-sans text-[#252B42]">
-      
-       <TopBar bgColor="#23856D" />
+      <TopBar bgColor="#23856D" />
       <Navbar pageType="DetailPage" />
       <ShopNav currentPage="Detail" hideTitle={true} />
       <DetailHero />
       <Quick />
       <Bestseller />
       <BrandRow bgColor="#FAFAFA" />
-      <SiteFooter topBgColor="#FFFFFF" /> 
-      
-    </div>
+      <SiteFooter topBgColor="#FFFFFF" />
+      </div>
   );
 }

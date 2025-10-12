@@ -63,6 +63,10 @@ export const ICONS = {
   new: "/img/new.png",
   chevronLeft: "/img/Left.png", 
   chevronRight: "/img/Right.png",
+  tel: "/img/telefon.png",
+  knm: "/img/konum.png",
+  mail: "/img/mail.png",
+  arrow: "/img/Arrow 2.png",
 };
 
 export const COLORS = {
@@ -80,6 +84,10 @@ export const SOCIAL_ICONS = {
   youtubetb: "/img/yt-tb.png",
   facebooktb: "/img/fb-tb.png",
   twittertb: "/img/tw-tb.png",
+  contins: "/img/Cont-instagram.png",
+  contface: "/img/Cont-facebook.png",
+  contlinked: "/img/Cont-linkedin.png",
+  contwiter: "/img/Cont-twitter.png",
 };
 
 export const CLOTHS = [
@@ -128,4 +136,9 @@ export const BEST = [
   "/img/Bestseller-6.png",
   "/img/Bestseller-1.png",
   "/img/Bestseller-2.png",
+]
+
+export const CONTACT = [
+  "/img/Cont-hero.png",
+  "/img/Cont-hero_mobil.png",
 ]
