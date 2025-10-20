@@ -12,7 +12,7 @@ export default function DetailPage() {
     <div className="font-sans text-[#252B42]">
       <TopBar bgColor="#23856D" />
       <Navbar pageType="DetailPage" />
-      <ShopNav currentPage="Detail" hideTitle={true} />
+      <ShopNav hideTitle={true} pageType="detail" />
       <DetailHero />
       <Quick />
       <Bestseller />

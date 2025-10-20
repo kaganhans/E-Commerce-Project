@@ -142,3 +142,42 @@ export const CONTACT = [
   "/img/Cont-hero.png",
   "/img/Cont-hero_mobil.png",
 ]
+
+export const INNOVATION = [
+  "/img/Innovation-1.png",
+  "/img/Innovation-2.png",
+  "/img/Innovation-3.png",
+  "/img/Innovation-4.png",
+  "/img/Innovation-5.png",
+  "/img/Innovation-1_mob.png",
+  "/img/Innovation-2_mob.png",
+  "/img/Innovation-3_mob.png",
+  "/img/Innovation-4_mob.png",
+  "/img/Innovation-5_mob.png",
+  ]
+
+  export const Meet = [
+  "/img/Meet-1.jpeg",
+  "/img/Meet-2.jpeg",
+  "/img/Meet-3.png",
+  "/img/Meet-4.png",
+  "/img/Meet-5.png",
+  "/img/Meet-6.png",
+  "/img/Meet-7.png",
+  "/img/Meet-8.png",
+  "/img/Meet-9.png",
+]
+
+export const Media = [
+  "/img/video-1.png",
+  ]
+
+  export const AboHero = [
+  "/img/About-Hero.png",
+  "/img/About-Hero-mobil.png",
+  ]
+
+  export const Grow = [
+  "/img/Grow-1.png",
+  ]
+  

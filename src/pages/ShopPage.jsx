@@ -11,7 +11,7 @@ export default function ShopPage() {
     <div className="font-sans text-[#252B42]">
       <TopBar bgColor="#23856D" />
       <Navbar pageType="ShopPage" />
-      <ShopNav/>
+      <ShopNav hideTitle={false} />
       <ShopHero/>
       <Showing/>
       <BrandRow bgColor="#FAFAFA" />
@@ -19,3 +19,4 @@ export default function ShopPage() {
       </div>
   );
 }
+

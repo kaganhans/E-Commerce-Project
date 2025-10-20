@@ -7,16 +7,16 @@ export default function Navbar({ pageType = "Home" }) {
   
   const isFullMobileMenu = pageType === "ShopPage" || pageType === "DetailPage";
   
-  // 🎯 ContactPage'de sadece bu 4 link gözükecek
+  // ContactPage, TeamPage ve YENİ: AboutPage'de sadece bu 4 link gözükecek
   const contactPageLinks = ["Home", "Product", "Pricing", "Contact"];
   const homeMobileLinks = ["Home", "Product", "Pricing", "Contact"];
   const desktopLinks = ["Home", "Shop", "About", "Blog", "Contact", "Pages"];
   const mobileLinks = isFullMobileMenu ? desktopLinks : homeMobileLinks;
 
-  // 🎯 SADECE ContactPage'DE "BECOME A MEMBER" BUTONU GÖSTER
-  const showBecomeMember = pageType === "ContactPage";
+  // SADECE ContactPage, TeamPage ve YENİ: AboutPage'DE "BECOME A MEMBER" BUTONU GÖSTER
+  const showBecomeMember = pageType === "ContactPage" || pageType === "TeamPage" || pageType === "AboutPage";
 
-  // 🎯 ContactPage'de kullanılacak link listesi
+  // ContactPage, TeamPage ve YENİ: AboutPage'de kullanılacak link listesi
   const currentDesktopLinks = showBecomeMember ? contactPageLinks : desktopLinks;
 
   return (
@@ -39,7 +39,7 @@ export default function Navbar({ pageType = "Home" }) {
             Bandage
           </Link>
 
-          {/* Menü - ContactPage'de sadece 4 link */}
+          {/* Menü - ContactPage, TeamPage ve AboutPage'de sadece 4 link */}
           <nav className="min-w-0">
             <ul className="flex justify-center items-center gap-8 whitespace-nowrap">
               {currentDesktopLinks.map((label) => {
@@ -59,7 +59,7 @@ export default function Navbar({ pageType = "Home" }) {
                     >
                       {label}
                     </Link>
-                    {/* Shop oku - ContactPage'de gözükmeyecek */}
+                    {/* Shop oku - ContactPage, TeamPage ve AboutPage'de gözükmeyecek */}
                     {isShop && !showBecomeMember && (
                       <svg
                         width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -76,7 +76,7 @@ export default function Navbar({ pageType = "Home" }) {
 
           {/* Sağ aksiyonlar */}
           <div className="flex items-center gap-6 shrink-0 whitespace-nowrap">
-            {/* Login / Register - ContactPage'de sadece "Login" */}
+            {/* Login / Register - ContactPage, TeamPage ve AboutPage'de sadece "Login" */}
             <Link
               to="/login"
               className="flex items-center gap-2 text-[#23A6F0] text-[14px] leading-[24px] tracking-[0.2px] font-bold"
@@ -88,7 +88,7 @@ export default function Navbar({ pageType = "Home" }) {
               {showBecomeMember ? "Login" : "Login / Register"}
             </Link>
 
-            {/* 🎯 SADECE ContactPage'DE GÖSTER - YENİ BUTON STİLİ + OK İŞARETİ */}
+            {/* SADECE ContactPage, TeamPage ve AboutPage'DE GÖSTER - "BECOME A MEMBER" BUTONU */}
             {showBecomeMember && (
               <Link
                 to="/membership"
@@ -118,7 +118,7 @@ export default function Navbar({ pageType = "Home" }) {
               </Link>
             )}
 
-            {/* 🎯 ContactPage'DE ARAMA, SEPET VE FAVORİ İCONLARI GÖZÜKMEYECEK */}
+            {/* ContactPage, TeamPage ve AboutPage'DE ARAMA, SEPET VE FAVORİ İCONLARI GÖZÜKMEYECEK */}
             {!showBecomeMember && (
               <>
                 {/* Arama */}
@@ -160,7 +160,7 @@ export default function Navbar({ pageType = "Home" }) {
           {/* SAĞ TARAF - Mobil ikonlar ve Hamburger */}
           <div className="flex items-center gap-4"> 
             
-            {/* 🎯 ContactPage'DE ÜSTTEKİ İCONLAR GÖZÜKMEYECEK */}
+            {/* ContactPage, TeamPage ve AboutPage'DE ÜSTTEKİ İCONLAR GÖZÜKMEYECEK */}
             {!isFullMobileMenu && !showBecomeMember && (
               <>
                 {/* User Icon */}
@@ -232,7 +232,7 @@ export default function Navbar({ pageType = "Home" }) {
               
               {isFullMobileMenu && (
                 <div className="flex flex-col items-center gap-6 pt-10 px-6">
-                  {/* Login / Register - ContactPage'de sadece "Login" */}
+                  {/* Login / Register - ContactPage, TeamPage ve AboutPage'de sadece "Login" */}
                   <Link
                       to="/login"
                       onClick={() => setIsOpen(false)}
@@ -245,7 +245,7 @@ export default function Navbar({ pageType = "Home" }) {
                       {showBecomeMember ? "Login" : "Login / Register"}
                   </Link>
 
-                  {/* 🎯 SADECE ContactPage'DE GÖSTER - YENİ BUTON STİLİ + OK İŞARETİ (Mobil) */}
+                  {/* SADECE ContactPage, TeamPage ve AboutPage'DE GÖSTER - "BECOME A MEMBER" BUTONU (Mobil) */}
                   {showBecomeMember && (
                     <Link
                       to="/membership"
@@ -276,7 +276,7 @@ export default function Navbar({ pageType = "Home" }) {
                     </Link>
                   )}
 
-                  {/* 🎯 ContactPage'DE MOBİL MENÜDE ARAMA, SEPET VE FAVORİ İCONLARI GÖZÜKMEYECEK */}
+                  {/* ContactPage, TeamPage ve AboutPage'DE MOBİL MENÜDE ARAMA, SEPET VE FAVORİ İCONLARI GÖZÜKMEYECEK */}
                   {!showBecomeMember && (
                     <div className="flex flex-col items-center gap-6"> 
                       {/* Arama */}
