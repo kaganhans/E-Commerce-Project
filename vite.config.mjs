@@ -11,4 +11,15 @@ export default defineConfig({
   css: {
     postcss: resolve(__dirname, "postcss.config.js"),
   },
+  server: {
+    proxy: {
+      // Frontend'te /api ile başlayan istekleri backend'e yönlendir
+      "/api": {
+        target: "http://localhost:3000", // ← backend origin (sende neyse onu yaz)
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ""), // /api/user/address -> /user/address
+      },
+    },
+  },
 });

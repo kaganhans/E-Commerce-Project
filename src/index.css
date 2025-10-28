@@ -6,3 +6,6 @@
   a { @apply text-[inherit] no-underline; }
   button { @apply text-[inherit]; }
 }
+
+/* globals.css veya index.css */
+.input { @apply w-full rounded-lg border px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black/70; }
